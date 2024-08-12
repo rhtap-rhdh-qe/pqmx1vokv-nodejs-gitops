@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: pqmx1vokv-nodejs-gitops
+  description: This is GitOps manifest for pqmx1vokv-nodejs   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: pqmx1vokv-nodejs
+    janus-idp.io/tekton: pqmx1vokv-nodejs
+    backstage.io/kubernetes-id: pqmx1vokv-nodejs 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:pqmx1vokv-nodejs
